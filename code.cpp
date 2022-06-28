@@ -1,7 +1,17 @@
-#include<iostream> #include<iomanip> #include<windows.h> #include<conio.h> #include<cstring> usingnamespacestd; structnode
+#include<iostream> 
+#include<iomanip>
+#include<windows.h>
+#include<conio.h> 
+#include<cstring> 
+using namespace std; 
+struct node
 {
-stringname,  doctorname,  address,  no; charspecial;
-intage,  id; intdays; node *prev; node *next;
+string name,  doctorname,  address,  no; 
+ char special;
+ int age, id; 
+ int days; 
+ node *prev;
+ node *next;
 
 };
 
@@ -11,31 +21,31 @@ intcount;
 node  *head  =  NULL; node  *tail  =  NULL;
 public:
 
-voiddetails (); voiddisplay (); node*searc ();
-voiddoctor  (node*temp,  chara); voidedit();
-//void delete(); voidgotoxy  (intx,  inty); voidAbove_horizontal  (); voidLine (); voidbelow_Horizontal  (); voidmenu();
-voiddelet();
+void details ();
+void display (); 
+node * searc ();
+void doctor  (node*temp,  chara); 
+void edit();
+void gotoxy  (intx,  inty); 
+void Above_horizontal ();
+void Line ();
+void below_Horizontal ();
+void menu();
+void delet();
 };
-
-
-********************************	MAIN FUNCTION
-******************************************
- 
-
-
-
-
-
-
-
-
+********************************	MAIN FUNCTION******************************************
 
 intmain ()
 {
 
 system("cls");
 
-hospitalh1; charloader=254; h1.gotoxy(13,3); cout<<"Loading"; h1.gotoxy(20,3); for(inti=0;i<40;i++)
+hospital h1;
+char loader=254;
+ h1.gotoxy(13,3); 
+ cout<<"Loading"; 
+ h1.gotoxy(20,3);
+ for(inti=0;i<40;i++)
 {
 cout<<loader; Sleep(60);
 }
@@ -45,14 +55,15 @@ h1.gotoxy(30,4);
 h1.gotoxy(3,3); h1.Above_horizontal(); h1.gotoxy(3,5); h1.below_Horizontal(); h1.gotoxy(3,4);
 h1.Line();
 h1.gotoxy(78,4);
-h1.Line(); h1.gotoxy(13,15);
+h1.Line(); 
+h1.gotoxy(13,15);
 //**************************** h1.menu();
-getch(); return0;
+getch(); 
+return 0;
 }
+
 ************************************************************************************
-******
-************************************************************************************
-****** Voidhospital::details  ()
+ Void hospital::details  ()
  
 {
 //*************************** gotoxy(22,7); Above_horizontal(); gotoxy(22,9); below_Horizontal(); gotoxy(22,8);
